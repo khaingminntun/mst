@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Menu img {
+    width: 35px;
+    cursor: pointer;
+    margin: 30px 12px 0px;
+    transition: 0.2s;
+}
+
+.Menu img:hover {
+    
+    box-shadow:1px 1px 5px 2px #dee2e6;
+}
+
+.sidenav {
+    width: 20%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    padding-top: 50px;
+    box-shadow: 1px 0px 8px 1px #adb5bd;
+    transition: 0.5s;
+}
+
+.sidenav .btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    transition: 0.1s;
+}
+
+.sidenav .btnClose:hover {
+    background: #dcdbdb;
+    padding: 3px;
+}
+
+.sidenav a:not(.logo) {
+    display: flex;
+    gap: 5px;
+    padding: 6px 8px 22px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    transition: 0.5s;
+}
+
+.sidenav .logo {
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 0px 30px;
+    text-align: center;
+}
+.sidenav img {
+    width: 30px;
+}
+
+.sidenav .items {
+    padding-top: 20px;
+}
+
+.sidenav a:not(.logo):hover {
+    background-color: #dee2e6;
+}
+
+@media screen and (max-width: 990px) {
+    .sidenav {
+        width: 30%;
+    }
+    .sidenav .logo {
+        font-size: 26px;
+        padding: 12px 6px;
+    }
+    .sidenav a:not(.logo) {
+        font-size: 17px;
+        padding: 6px 8px 22px 16px;
+    }
+    .sidenav img {
+        width: 22px;
+    }
+
+    .sidenav .btnClose {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+        width: 40%;
+    }
+    .sidenav .logo {
+        font-size: 22px;
+        padding: 12px 3px;
+    }
+    .sidenav a:not(.logo) {
+        font-size: 16px;
+        padding: 6px 8px 22px 16px;
+    }
+    .sidenav img {
+        width: 20px;
+    }
+
+}
+
+.home-content { 
+    padding: 50px 0px;
+}

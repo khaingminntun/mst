@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Menu img {
+    width: 35px;
+    cursor: pointer;
+    margin: 30px 12px 0px;
+    transition: 0.2s;
+}
+
+.Menu img:hover {
+    
+    box-shadow:1px 1px 5px 2px #dee2e6;
+}
+
+.sidenav {
+    width: 20%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    padding-top: 50px;
+    box-shadow: 1px 0px 8px 1px #adb5bd;
+    transition: 0.4s;
+}
+
+.sidenav .btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    transition: 0.1s;
+}
+
+.sidenav .btnClose:hover {
+    background: #dcdbdb;
+    padding: 3px;
+}
+
+.sidenav a:not(.logo) {
+    display: flex;
+    gap: 5px;
+    padding: 6px 8px 22px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    transition: 0.5s;
+}
+
+.sidenav .logo {
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 0px 30px;
+    text-align: center;
+}
+.sidenav img {
+    width: 30px;
+}
+
+.sidenav .items {
+    padding-top: 20px;
+}
+
+.sidenav a:not(.logo):hover {
+    background-color: #dee2e6;
+}
+
+@media screen and (max-width: 990px) {
+    .sidenav {
+        width: 30%;
+    }
+    .sidenav .logo {
+        font-size: 26px;
+        padding: 12px 6px;
+    }
+    .sidenav a:not(.logo) {
+        font-size: 17px;
+        padding: 6px 8px 22px 16px;
+    }
+    .sidenav img {
+        width: 22px;
+    }
+
+    .sidenav .btnClose {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+        width: 0%;
+    }
+    .sidenav .logo {
+        font-size: 22px;
+        padding: 12px 3px;
+    }
+    .sidenav a:not(.logo) {
+        font-size: 16px;
+        padding: 6px 8px 22px 16px;
+    }
+    .sidenav img {
+        width: 20px;
+    }
+
+}
+
+/* =============    ===============*/
+
+.main-content {
+   width: 100vw;
+   padding-top: 10px;
+}
+
+.main-content .box {
+    margin-left: 310px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.box h3 {
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.main-content .accordion {
+    background-color: #f8f9fa;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #dee2e6;
+}
+
+.accordion:after {
+    content: '\002B';
+    font-size: 25px;
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active::after {
+    content: "\2212";
+}
+
+.accordion.active {
+    background-color: #dee2e6;
+    border: 3px solid #e9ecef;
+}
+
+.panel {
+    padding: 0 18 px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel .row {
+    display: flex;
+    padding: 12px;
+    justify-content: flex-start;
+    border: 2px solid #dee2e6;
+}
+
+.panel .col_2{
+    margin: 0px 30px 10px;
+}
+
+.panel .price_Table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.price_Table th, td {
+    border: 2px solid #ddd;
+    padding: 8px 50px;
+}
+
+.price_Table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.price_Table th {
+    font-size: 17px;
+    padding: 12px 0 12px;
+    background-color: #48cae4;
+}
+
+.panel img {
+    width: 500px;
+    height: 300px;
+}
+.panel .link {
+    padding-top: 22px;
+    line-height: 1.5;
+}
+
+.btnBuy {
+    font-size: 18px;
+    color: white;
+    width: 200px;
+    padding: 12px 22px;
+    background-color: #4361ee;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 20px 0px 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .main-content .box {
+        margin-left: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main-content {
+        width: 100%;
+    }
+    .main-content .box {
+        margin: 0;
+        padding: 12px;
+    }
+
+    .panel .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .panel .col_2{
+        margin-top: 10px;
+    }
+
+    .btnBuy {
+        width: 100%;
+    }
+}
+
+
+/*========= Contact ==========*/
+
+.content-link {
+    margin: auto 200px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.content-link .btnMessage{
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    padding: 22px 25px;
+    background-color: #4361ee;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 20px 0px 20px;
+  }
+  
+  .btnMessage:hover {
+    background: #3cb0fd;
+  }
+
+  @media screen and (max-width: 700px) {
+    .content-link {
+        margin: auto;
+        
+    }
+  }
